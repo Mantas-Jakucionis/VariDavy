@@ -1,0 +1,9 @@
+@software{VariDavy,
+  author = {Jakucionis, Mantas},
+  doi = {10.5281/zenodo.7985119},
+  month = {5},
+  title = {{VariDavy}},
+  url = {https://github.com/Mantas-Jakucionis/VariDavy},
+  version = {1.0.0},
+  year = {2023}
+}
