@@ -100,8 +100,8 @@ end
 function plot2D(diag_R::Matrix{ComplexF64}, diag_nR::Matrix{ComplexF64}, type::String, zmax::Float64, levels::Int, time2D; conv::Float64=-1.0, xrange=-1, yrange=-1, title::String = "")
 
      if type == "2DES" || type == "ES" || type == "2D" || type == "2d"
-          w1, w3, pDiag_R = processDiagram(time2D, time2D, diag_R, tau);
-          w1, w3, pDiag_nR = processDiagram(time2D, time2D, diag_nR, tau);
+          w1, w3, pDiag_R = processDiagram(time2D, time2D, diag_R, conv);
+          w1, w3, pDiag_nR = processDiagram(time2D, time2D, diag_nR, conv);
 
           wxrange = (minimum(w1), maximum(w1))
           wyrange = (minimum(w3), maximum(w3))

@@ -9,7 +9,7 @@
       d2Thres = 0.1 # threshold for mD2 -> D2 approximation 
 
       singleMultipleLES = false # whther to optimize for the lowest energy state in terms of a single multiple
-      ntrialsLES = 1 # number of trials for optimization for the lowest energy state 
+      ntrialsLES = 10 # number of trials for optimization for the lowest energy state 
 
       multpDistr = "polygon" # polygon/grid; function to place unpopulated multiples  
       multpPerLayer = 4 # for polygon; number of multiples per polygon layer
@@ -39,13 +39,13 @@
       
       dipGE = nothing # transition dipole vectors {nsite, 3}
       
-      rsite = nothing # reorganization energy of each site {nsite}
+      rsite = zeros(Float64, nsite) # reorganization energy of each site {nsite}
 
       iwG = nothing # frequencies of intramolecular vibrations in the ground state {nsite, Q}
       
       iwE = nothing # frequencies of intramolecular vibrations in the excited state {nsite, Q}
 
-      id = nothing # QHO displacements of intramolecular vibrations in the excited state {nsite, Q}
+      id = nothing # QHO coordinate displacements of intramolecular vibrations in the excited state {nsite, Q}
 
       staticDisorderSigma = 0.0 # standard deviation of Gaussian static energy disorder for site excitation energies
       
@@ -56,7 +56,7 @@
       bathSpdParameters = [100] # necessary parameters of the selected SPD
       tmin = 0.0 # initital propagation time
       tmax = 2000.0 # final propagation time
-      dt   = 1.0 # time step size to sample interval [tmin, tmax]
+      dt   = 0.25 # time step size to sample interval [tmin, tmax]
 
       temp = 300.0 # initial bath temperature
       ntraj = 1 # number of trajectories
